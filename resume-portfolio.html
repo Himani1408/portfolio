@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himani Rajpurohit | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.navbar{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    color:#38bdf8;
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+
+    background:
+    radial-gradient(circle at top right,#0ea5e955,transparent),
+    radial-gradient(circle at bottom left,#38bdf855,transparent);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.profile-img{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #38bdf8;
+
+    box-shadow:
+    0 0 20px #38bdf8,
+    0 0 50px rgba(56,189,248,.5);
+
+    transition:.4s;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
+}
+
+.hero h1{
+    font-size:3.8rem;
+    margin-top:20px;
+}
+
+.hero h2{
+    color:#38bdf8;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin:10px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0284c7;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(56,189,248,.25);
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
+}
+
+/* SKILLS */
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill span{
+    display:block;
+    margin-bottom:8px;
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#334155;
+    border-radius:10px;
+}
+
+.fill{
+    height:100%;
+    background:#38bdf8;
+    border-radius:10px;
+}
+
+/* TIMELINE */
+
+.timeline{
+    border-left:3px solid #38bdf8;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:40px;
+}
+
+.timeline-item h3{
+    color:#38bdf8;
+}
+
+.timeline-item span{
+    color:#94a3b8;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:20px;
+    color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero h2{
+    font-size:1rem;
+}
+
+.profile-img{
+    width:220px;
+    height:220px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+<div class="navbar">
+
+<div class="logo">Himani Portfolio</div>
+
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="D:\Himani\porfolio profile.jpeg"
+alt="Himani Rajpurohit"
+class="profile-img">
+
+<h1>Himani Rajpurohit</h1>
+
+<h2>
+MSc IT (Cyber Security & Forensics) |
+Cyber Security Enthusiast |
+Tutor & Mentor
+</h2>
+
+<p>
+Passionate IT professional specializing in Cyber Security and Forensics,
+with strong academic achievements, internship experience, programming
+knowledge and a passion for teaching and mentoring students.
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+I am Himani Rajpurohit, an MSc IT graduate specializing in Cyber Security &
+Forensics from Parul University with a CGPA of 8.26. I completed my Bachelor
+of Computer Applications from Dharmsinh Desai University (DDU), Nadiad in
+2024 with First Class Distinction and an overall CGPA of 8.0.
+
+<br><br>
+
+My interests include cybersecurity, networking, programming and mentoring
+students. I enjoy solving technical challenges and sharing knowledge
+through teaching.
+</p>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>MSc Information Technology</h3>
+<p>
+Specialization: Cyber Security & Forensics<br><br>
+Parul University<br><br>
+Completed: 2026<br><br>
+CGPA: 8.26
+</p>
+</div>
+
+<div class="card">
+<h3>Bachelor of Computer Applications</h3>
+<p>
+Dharmsinh Desai University (DDU), Nadiad<br><br>
+Completed: 2024<br><br>
+First Class with Distinction<br><br>
+CGPA: 8.0
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skill">
+<span>Cyber Security</span>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<span>Networking</span>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<span>Python</span>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<span>Java</span>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+<span>C Programming</span>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<span>C++ Programming</span>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+<span>MySQL</span>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<span>Linux & Windows</span>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2 class="section-title">Work Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Intern - Creative Werk Designs</h3>
+<span>December 2023 – March 2024</span>
+<p>
+Worked in a professional IT environment and assisted in technical and
+operational activities.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Part-Time Tutor - Verdant Academy</h3>
+<span>October 2020 – March 2022</span>
+<p>
+Taught English and academic subjects while helping students prepare for exams.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Part-Time Tutor - Mirror Institute</h3>
+<span>April 2022 – July 2023</span>
+<p>
+Provided individual and group tutoring support for school students.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Computer & Programming Instructor</h3>
+<span>Present</span>
+<p>
+Teaching computer subjects and basic programming languages at school and institute level.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="card">
+
+<h3>Hotel Management System</h3>
+
+<p>
+Live consultancy project completed during MSc IT (3rd and 4th Semester).
+The client was independently acquired by me and the project was successfully
+executed by our team.
+
+<br><br>
+
+✔ Real Client Project<br>
+✔ Paid Consultancy Work<br>
+✔ Hotel Management Solution Development<br>
+✔ Team Collaboration & Project Management
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact">
+
+<p>📞 8690264464</p>
+
+<p>📧 rajpurohithimani1408@gmail.com</p>
+
+<p>📍 Nadiad, Gujarat, India</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/himani-rajpurohit-b4834222b" target="_blank">
+View Profile
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/Himani1408" target="_blank">
+View GitHub
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Himani Rajpurohit | Portfolio Website
+</footer>
+
+</body>
+</html>
